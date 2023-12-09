@@ -1,26 +1,66 @@
-
-.light {
+.traffic-light {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .light-container {
+    position: relative;
+    width: 150px;
+    background-color: black;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .light {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     margin: 10px;
     cursor: pointer;
     transition: box-shadow 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
-
-.red { 
-    background-color: red; 
-}
-.yellow {
+  }
+  
+  .red {
+    background-color: red;
+  }
+  
+  .yellow {
     background-color: yellow;
-}
-.green {
-    background-color: green; 
-}
-
-.selected { 
-    box-shadow: 0 0 20px 10px #fff, 0 0 20px 20px #fff, 0 0 20px 30px #fff; 
+  }
+  
+  .green {
+    background-color: green;
+  }
+  
+  .selected {
+    box-shadow: 0 0 20px 10px #fff, 0 0 20px 20px #fff, 0 0 20px 30px #fff;
     opacity: 1;
   }
+  
+  .light:not(.selected) {
+    opacity: 0.5;
+  }
+  
+  .pole {
+    width: 20px;
+    height: 150px;
+    background-color: gray;
+  }
+  
+  
+  /* Position the lights vertically */
+  .light.red {
+    top: 10%;
+  }
+  
+  .light.yellow {
+    top: 40%;
+  }
+  
+  .light.green {
+    top: 70%;
+  }
 
-  .light:not(.selected) { opacity: 0.5; }
+  
